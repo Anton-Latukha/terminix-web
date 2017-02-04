@@ -3,8 +3,9 @@ title: Terminix&colon; News
 layout: default
 ---
  <div class="section">
-    {% if paginator.posts != empty %}
-        {% assign ordered_news = paginator.posts | sort: 'date' %}
+	{% assign posts=paginator.posts | where:"lang", site.lang %}
+    {% if posts != empty %}
+        {% assign ordered_news = posts | sort: 'date' %}
 	    {% for news in ordered_news reversed %}
 	        {% assign loopindex = forloop.index | modulo: 3 %}
 	        {% if loopindex == 1 %}

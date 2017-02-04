@@ -1,11 +1,19 @@
 ---
 permalink: /manual/
-title: Terminix&colon; Documentation
+
+t:
+    en:
+        title: Terminix&colon; Documentation
+
 layout: default
 ---
-<h1>Documentation</h1>
-<p>Welcome to the Terminix documentation, here is where you will learn to use all of the features in Terminix and make your experience as fun and productive as possible. Click on a link below to read more about a specific feature and how to get started using it.</p>
-{% for manual in site.manual %}
+
+
+<h1>{{ site.t[site.lang].documentation.title }}</h1>
+<p>{{ site.t[site.lang].documentation.description }}</p>
+{% assign site_manual=site.manual | where:"lang", site.lang %}
+
+{% for manual in site_manual %}
     <div id="{{manual.id}}">
     	<ul>
         	<li><a href="{{site.baseurl}}{{manual.id}}">{{manual.title}}</a></li>

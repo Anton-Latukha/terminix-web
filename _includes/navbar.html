@@ -5,14 +5,18 @@
         <i class="fa fa-terminal" aria-hidden="true"></i> Terminix
       </a>
     </li>
-    <li class="scroll"><a href="{{site.baseurl}}/#features">Features</a></li>
-    <li><a href="{{site.baseurl}}/news/">News</a></li>
-    <li><a href="{{site.baseurl}}/faq">FAQ</a></li>
-    <li><a href="{{site.baseurl}}/manual/">Documentation</a></li>
-    <li class="scroll"><a href="{{site.baseurl}}/#packages">Download</a></li>
-    <!--
-    <li class="donate"><a href="#">Donate</a></li>
-    -->
+    <li class="scroll"><a href="{{site.baseurl}}/#features">{{site.t[site.lang].navbar.features}}</a></li>
+    <li><a href="{{site.baseurl}}/news/">{{site.t[site.lang].navbar.news}}</a></li>
+    <li><a href="{{site.baseurl}}/faq">{{site.t[site.lang].navbar.faq}}</a></li>
+    <li><a href="{{site.baseurl}}/manual/">{{site.t[site.lang].navbar.documentation}}</a></li>
+    <li class="scroll"><a href="{{site.baseurl}}/#packages">{{site.t[site.lang].navbar.download}}</a></li>
+    <li class="language"><a href="#">{{site.t[site.lang].navbar.languages}}</a>
+      <ul>
+        {% for lang in site.t[site.lang].languages %}
+          <li><a href="#" class="set-language" data-lang="{{ lang[0] }}">{{ lang[1] }}</a></li>
+        {% endfor %}
+      </ul>
+    </li>
     <li class="hamburger-button">
       <a href="javascript:void(0);" onclick="navbar()">
         <i class="fa fa-bars" aria-hidden="true"></i>

@@ -1,10 +1,13 @@
 ---
 permalink: /faq
-title: Terminix&colon; FAQ
+t:
+    en:
+        title: Terminix&colon; FAQ
 layout: default
 ---
-{% for faq in site.faqs %}
-    <div id="{{faq.faq-id}}">
+{% assign faqs=site.faqs | where:"lang", site.lang %}
+{% for faq in faqs %}
+    <div>
         <h1>{{faq.title}}</h1>
         <p>{{faq.content}}</p>
     </div>

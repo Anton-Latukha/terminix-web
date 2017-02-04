@@ -30,9 +30,7 @@
         });
         $('.my-slider').bxSlider({
           mode: 'fade',
-          auto: true,
-          adaptiveHeight: true
-
+          auto: true
         });
         $(".tabs-content li[class='selected']").show();
         $(".tabs-navigation li:not(.hamburger-button) a").click(function(event){
@@ -92,4 +90,24 @@
       }
 
       tabs.classList.remove("tabs-responsive");
+    }
+
+    $('.set-language').click(function(e){
+        lang = $(this).attr("data-lang");
+        setLanguage(lang);
+        e.preventDefault();
+        location.reload();
+    });
+    function setLanguage(lang){
+        alert(lang);
+        Cookies.set('lang', lang);
+        console.log('lang : ' + lang);
+    }
+    function getLanguage(){
+        var lang = Cookies.get('lang');
+        if(lang){
+            return lang;
+        } else {
+            return "en";
+        }
     }

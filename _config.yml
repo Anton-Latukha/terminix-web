@@ -5,12 +5,46 @@ author: Gerald Nunn
 description: > # this means to ignore newlines until "baseurl:"
   Terminix is an advanced GTK3 tiling terminal for Linux based 
   on the Gnome Human Interface Guidelines (HIG).
+lang: "en" # Default language
+
 
 gems: [jekyll-paginate]
 # Number of articles per page
 paginate: 9
 paginate_path: "/news/page:num/"
-
+# Translations
+t:
+  en:
+    languages: 
+      en: "English"
+      fr: "French"
+    navbar:
+      features: "Features"
+      news: "News"
+      faq: "FAQ"
+      documentation: "Documentation"
+      download: "Download"
+      languages: "Languages"
+    home:
+      description: "Terminix is an advanced GTK3 tiling terminal emulator that follows the Gnome Human Interface Guidelines."
+      try_terminix: "Try Terminix"
+      source_code: "Source Code"
+      screenshots: "Screenshots"
+      features: "Features"
+      get_terminix: "Getting Terminix"
+      get_terminix_desc: "The best way to get Terminix is from packages maintained for your specific Linux distribution. The following distributions have packages available." 
+      contribute: "Contribute"
+      how_to_contribute: "Terminix welcomes contributions and encourages participation from the community, for developers please visit the <a href='https://github.com/gnunn1/terminix'>Terminix Github Development</a> site to contribute. For translators, Terminix is localized using Weblate, please visit the Weblate hosted <a href='https://hosted.weblate.org/projects/terminix/translations'>Terminix translations site</a> in order to assist with translations, please do not submit direct pull requests to the repository for translations."
+      report_issue: "If you are having issues with Terminix, feel free to open issues in the <a href='https://github.com/gnunn1/terminix/issues'>Terminix Github Issues</a> page as necessary. Developers and users can also be found on IRC on the freenode network in the <a href='irc://irc.freenode.net/terminix'>#terminix</a> room."
+      copyrights: "Designed and coded with love by <a href='https://github.com/bil-elmoussaoui'>Bilal Elmoussaoui.</a>"
+      published_by: "Published by <a href='https://pages.github.com/'>GitHub Pages</a> | <a href='#top'>Back to top</a>"
+    documentation:
+      title: "Documentation"
+      description: "Welcome to the Terminix documentation, here is where you will learn to use all of the features in Terminix and make your experience as fun and productive as possible. Click on a link below to read more about a specific feature and how to get started using it."
+  fr: 
+    languages: 
+      fr: "Francais"
+      en: "Anglais"
 
 sass:
   sass_dir: assets/sass
